@@ -58,6 +58,7 @@ namespace test_2
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.წაშლაToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.რედაქტირებაToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -177,7 +178,6 @@ namespace test_2
             this.Col_Id.HeaderText = "Id";
             this.Col_Id.Name = "Col_Id";
             this.Col_Id.ReadOnly = true;
-            this.Col_Id.Visible = false;
             // 
             // Col_Name
             // 
@@ -298,9 +298,10 @@ namespace test_2
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.წაშლაToolStripMenuItem});
+            this.წაშლაToolStripMenuItem,
+            this.რედაქტირებაToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
             // 
             // წაშლაToolStripMenuItem
             // 
@@ -308,6 +309,13 @@ namespace test_2
             this.წაშლაToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.წაშლაToolStripMenuItem.Text = "წაშლა";
             this.წაშლაToolStripMenuItem.Click += new System.EventHandler(this.წაშლაToolStripMenuItem_Click);
+            // 
+            // რედაქტირებაToolStripMenuItem
+            // 
+            this.რედაქტირებაToolStripMenuItem.Name = "რედაქტირებაToolStripMenuItem";
+            this.რედაქტირებაToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.რედაქტირებაToolStripMenuItem.Text = "რედაქტირება";
+            this.რედაქტირებაToolStripMenuItem.Click += new System.EventHandler(this.რედაქტირებაToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -366,13 +374,14 @@ namespace test_2
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem წაშლაToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem წაშლაToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem რედაქტირებაToolStripMenuItem;
     }
 }
 

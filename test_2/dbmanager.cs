@@ -60,7 +60,7 @@ namespace test_2
         // დამატება ბაზაში
 
 
-            public void insertEmp_sp (Class1 dea)
+          public void insertEmp_sp (Class1 dea)
             {
                 SqlCommand cmd = new SqlCommand("insertEmp_sp");
 
@@ -80,8 +80,26 @@ namespace test_2
                 }
             }
 
+        public void Dlt_employee(int Id)
+        {
+            SqlCommand cmd = new SqlCommand("Dlt_employee");
+            cmd.CommandType = CommandType.StoredProcedure;
 
+            cmd.Parameters.AddWithValue("@Id", Id);
+
+            using (SqlConnection conn = new SqlConnection(satestodea))
+            {
+                cmd.Connection = conn;
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+
+
+
+        }
+
+
+        }
 
     }
-
-}

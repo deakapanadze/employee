@@ -16,16 +16,19 @@ namespace test_2
     {
         
         dbmanager db = new dbmanager();
+
         public Form1()
         {
 
             InitializeComponent();
+            this.ContextMenuStrip = contextMenuStrip1;
             dataGridView1.AutoGenerateColumns = false;
 
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             GetTable1();
+            
         }
 
         // ახხალი ფორმის გახსნა
@@ -53,6 +56,9 @@ namespace test_2
             dataGridView1.DataSource = db.GetTable1();
         }
 
+       
+
+       
         private void button2_Click(object sender, EventArgs e)
         {
             GetTable1();
@@ -62,18 +68,23 @@ namespace test_2
         {
             GetTable1();
         }
-
+        //თულლ სტიპით წაშლა
         private void წაშლაToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+           // Class1 class3 = new Class1();
             DialogResult dialogresult = MessageBox.Show("ნამდვილად გსურთ წაშლა ?", "", MessageBoxButtons.YesNo);
             if (dialogresult == DialogResult.Yes)
             {
                 var selectedItem = (Class1)dataGridView1.SelectedRows[0].DataBoundItem;
-                int ID = selectedItem.Id;
-                //Cartridge.DeleteCartridges(ID);
-                //GetInvoice();
+                int Id = selectedItem.Id;
+                db.Dlt_employee(Id);
+                GetTable1();
             }
+        }
+
+        private void რედაქტირებაToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

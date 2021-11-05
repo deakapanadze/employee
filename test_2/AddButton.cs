@@ -21,7 +21,7 @@ namespace test_2
 
             InitializeComponent();
         }
-
+        //ჩაწერილი ინფორმაცია რომ დაასეივოს 
         private void button1_Click(object sender, EventArgs e)
         {
             Class1 class2 = new Class1();
