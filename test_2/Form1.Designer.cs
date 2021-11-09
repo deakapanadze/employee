@@ -171,6 +171,7 @@ namespace test_2
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(870, 550);
             this.dataGridView1.TabIndex = 0;
+
             // 
             // Col_Id
             // 
@@ -301,19 +302,19 @@ namespace test_2
             this.წაშლაToolStripMenuItem,
             this.რედაქტირებაToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(157, 48);
             // 
             // წაშლაToolStripMenuItem
             // 
             this.წაშლაToolStripMenuItem.Name = "წაშლაToolStripMenuItem";
-            this.წაშლაToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.წაშლაToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.წაშლაToolStripMenuItem.Text = "წაშლა";
             this.წაშლაToolStripMenuItem.Click += new System.EventHandler(this.წაშლაToolStripMenuItem_Click);
             // 
             // რედაქტირებაToolStripMenuItem
             // 
             this.რედაქტირებაToolStripMenuItem.Name = "რედაქტირებაToolStripMenuItem";
-            this.რედაქტირებაToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.რედაქტირებაToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.რედაქტირებაToolStripMenuItem.Text = "რედაქტირება";
             this.რედაქტირებაToolStripMenuItem.Click += new System.EventHandler(this.რედაქტირებაToolStripMenuItem_Click);
             // 

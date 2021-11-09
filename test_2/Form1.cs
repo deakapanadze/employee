@@ -16,6 +16,7 @@ namespace test_2
     {
         
         dbmanager db = new dbmanager();
+      
 
         public Form1()
         {
@@ -82,9 +83,14 @@ namespace test_2
             }
         }
 
-        private void რედაქტირებაToolStripMenuItem_Click(object sender, EventArgs e)
+        public void რედაქტირებაToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Class1 class3 = new Class1();
+            AddButton UpdateButton = new AddButton();
+            UpdateButton.ShowDialog();
 
         }
+
+       
     }
 }

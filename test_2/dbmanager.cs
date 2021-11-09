@@ -80,6 +80,7 @@ namespace test_2
                 }
             }
 
+        // წაშლის მეთოდი
         public void Dlt_employee(int Id)
         {
             SqlCommand cmd = new SqlCommand("Dlt_employee");
@@ -100,6 +101,33 @@ namespace test_2
         }
 
 
+        //აფდეითიდის მეთოდი
+         public void update_employee(Class1 dea1)
+        {
+            SqlCommand cmd = new SqlCommand("update_employee");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", dea1.Id);
+            cmd.Parameters.AddWithValue("@name", dea1.Name);
+            cmd.Parameters.AddWithValue("@lastname", dea1.Lastname);
+            cmd.Parameters.AddWithValue("@telephone", dea1.Telephone);
+            cmd.Parameters.AddWithValue("@date", dea1.Date);
+
+            using (SqlConnection conn = new SqlConnection(satestodea))
+            {
+                cmd.Connection = conn;
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
         }
+
+
+        // ძებნის მეთოდი
+
+
+
+
+
+      }
 
     }

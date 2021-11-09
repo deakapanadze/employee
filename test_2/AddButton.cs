@@ -10,16 +10,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using test_2.Model;
 
+
 namespace test_2
 {
     public partial class AddButton : Form
     {
         dbmanager db = new dbmanager();
 
+
         public AddButton()
         {
-
+          
             InitializeComponent();
+            
+            
         }
         //ჩაწერილი ინფორმაცია რომ დაასეივოს 
         private void button1_Click(object sender, EventArgs e)
@@ -32,5 +36,11 @@ namespace test_2
             db.insertEmp_sp(class2);
             this.Close();
         }
+
+       
+
+
+
+        
     }
 }
