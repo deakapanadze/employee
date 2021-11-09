@@ -86,7 +86,9 @@ namespace test_2
         public void რედაქტირებაToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Class1 class3 = new Class1();
-            AddButton UpdateButton = new AddButton();
+            var selectedItem = (Class1)dataGridView1.SelectedRows[0].DataBoundItem;
+            int Id = selectedItem.Id;
+            UpdateButton UpdateButton = new UpdateButton(Id, this);
             UpdateButton.ShowDialog();
 
         }

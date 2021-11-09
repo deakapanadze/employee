@@ -29,10 +29,10 @@ namespace test_2
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.upd__Date = new System.Windows.Forms.DateTimePicker();
-            this.upd__LastName = new System.Windows.Forms.TextBox();
-            this.upd__Name = new System.Windows.Forms.TextBox();
+            this.btn_Save = new System.Windows.Forms.Button();
+            this.upd_Date = new System.Windows.Forms.DateTimePicker();
+            this.upd_LastName = new System.Windows.Forms.TextBox();
+            this.upd_Name = new System.Windows.Forms.TextBox();
             this.upd_Telephone = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,38 +40,38 @@ namespace test_2
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_Save
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(313, 185);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 29);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "დამატება";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Save.BackColor = System.Drawing.Color.SeaGreen;
+            this.btn_Save.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Save.Location = new System.Drawing.Point(313, 185);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(119, 29);
+            this.btn_Save.TabIndex = 17;
+            this.btn_Save.Text = "შენახვა";
+            this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
-            // upd__Date
+            // upd_Date
             // 
-            this.upd__Date.Location = new System.Drawing.Point(151, 72);
-            this.upd__Date.Name = "upd__Date";
-            this.upd__Date.Size = new System.Drawing.Size(293, 23);
-            this.upd__Date.TabIndex = 16;
+            this.upd_Date.Location = new System.Drawing.Point(151, 72);
+            this.upd_Date.Name = "upd_Date";
+            this.upd_Date.Size = new System.Drawing.Size(293, 23);
+            this.upd_Date.TabIndex = 16;
             // 
-            // upd__LastName
+            // upd_LastName
             // 
-            this.upd__LastName.Location = new System.Drawing.Point(151, 144);
-            this.upd__LastName.Name = "upd__LastName";
-            this.upd__LastName.Size = new System.Drawing.Size(293, 23);
-            this.upd__LastName.TabIndex = 15;
+            this.upd_LastName.Location = new System.Drawing.Point(151, 144);
+            this.upd_LastName.Name = "upd_LastName";
+            this.upd_LastName.Size = new System.Drawing.Size(293, 23);
+            this.upd_LastName.TabIndex = 15;
             // 
-            // upd__Name
+            // upd_Name
             // 
-            this.upd__Name.Location = new System.Drawing.Point(151, 111);
-            this.upd__Name.Name = "upd__Name";
-            this.upd__Name.Size = new System.Drawing.Size(293, 23);
-            this.upd__Name.TabIndex = 14;
+            this.upd_Name.Location = new System.Drawing.Point(151, 111);
+            this.upd_Name.Name = "upd_Name";
+            this.upd_Name.Size = new System.Drawing.Size(293, 23);
+            this.upd_Name.TabIndex = 14;
             // 
             // upd_Telephone
             // 
@@ -121,10 +121,10 @@ namespace test_2
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 230);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.upd__Date);
-            this.Controls.Add(this.upd__LastName);
-            this.Controls.Add(this.upd__Name);
+            this.Controls.Add(this.btn_Save);
+            this.Controls.Add(this.upd_Date);
+            this.Controls.Add(this.upd_LastName);
+            this.Controls.Add(this.upd_Name);
             this.Controls.Add(this.upd_Telephone);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -132,7 +132,6 @@ namespace test_2
             this.Controls.Add(this.label1);
             this.Name = "UpdateButton";
             this.Text = "UpdateButton";
-            this.Load += new System.EventHandler(this.UpdateButton_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,10 +139,10 @@ namespace test_2
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker upd__Date;
-        private System.Windows.Forms.TextBox upd__LastName;
-        private System.Windows.Forms.TextBox upd__Name;
+        private System.Windows.Forms.Button btn_Save;
+        private System.Windows.Forms.DateTimePicker upd_Date;
+        private System.Windows.Forms.TextBox upd_LastName;
+        private System.Windows.Forms.TextBox upd_Name;
         private System.Windows.Forms.TextBox upd_Telephone;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

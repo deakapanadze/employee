@@ -132,6 +132,7 @@ namespace test_2
             this.Controls.Add(this.label1);
             this.Name = "AddButton";
             this.Text = "AddButton";
+
             this.ResumeLayout(false);
             this.PerformLayout();
 

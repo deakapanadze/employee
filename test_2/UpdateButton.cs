@@ -13,53 +13,35 @@ namespace test_2
 {
     public partial class UpdateButton : Form
     {
-        public int id;
+        public int Id;
+        Form1 forms = new Form1();
+        Class1 update = new Class1();
         dbmanager db = new dbmanager();
 
-
-
-        public UpdateButton()
+        public UpdateButton(int id, Form1 form)
         {
+            this.Id = id;
+            this.forms = form;
+
             InitializeComponent();
-           
+            update = db.GetEmployeeById(Id);
+            upd_Telephone.Text = update.Telephone;
+            upd_Date.Value = Convert.ToDateTime(update.Date);
+            upd_Name.Text = update.Name;
+            upd_LastName.Text = update.Lastname;
+         
         }
 
-
-
-
-        private void UpdateButton_Load(object sender, EventArgs e)
+        private void btn_Save_Click(object sender, EventArgs e)
         {
+            update.Telephone = upd_Telephone.Text;
+            update.Date = upd_Date.Value;
+            update.Name = upd_Name.Text;
+            update.Lastname = upd_LastName.Text;
+            db.update_employee(update);
+            this.Close();
+
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
-
-        //private void upd_Telephone_TextChanged(object sender, EventArgs e)
-        //{
-        //    Class1 upd = new Class1();
-        //    upd.Telephone = upd_Telephone.Text;
-        //    db.update_employee(upd);
-        //    db.GetTable1();
-        //}
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    Class1 upd = new Class1();
-        //    upd.Telephone = upd_Telephone.Text;
-        //    db.update_employee(upd);
-        //    this.Close();
-        //}
-
-
-
-
-
     }
 }

@@ -127,7 +127,39 @@ namespace test_2
 
 
 
+        // საბა რო ვერ მიხვდა ის მეთოდია
 
-      }
+
+        public Class1 GetEmployeeById(int id)
+        {
+            Class1 Update1 = new Class1();
+            SqlCommand cmd = new SqlCommand("GetupdateById");
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@id", id);
+            using (SqlConnection conn = new SqlConnection(satestodea))
+            {
+                cmd.Connection = conn;
+                conn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Update1.Id = Convert.ToInt32(reader["id"]);
+                        Update1.Telephone = Convert.ToString(reader["Telephone"]);
+                        Update1.Name = Convert.ToString(reader["Name"]);
+                        Update1.Lastname = Convert.ToString(reader["lastName"]);
+                        Update1.Date = Convert.ToDateTime(reader["date"]);
+                    }
+                    reader.Close();
+                    
+                }
+                return Update1;
+            }
+        }
+
+
+
+    }
 
     }
