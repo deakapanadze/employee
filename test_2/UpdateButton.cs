@@ -17,6 +17,7 @@ namespace test_2
         Form1 forms = new Form1();
         Class1 update = new Class1();
         dbmanager db = new dbmanager();
+        DataGridView dataGridView1 = new DataGridView();
 
         public UpdateButton(int id, Form1 form)
         {
@@ -29,11 +30,28 @@ namespace test_2
             upd_Date.Value = Convert.ToDateTime(update.Date);
             upd_Name.Text = update.Name;
             upd_LastName.Text = update.Lastname;
-         
+
+
+        }
+
+
+
+        private void GetTable1()
+        {
+            dataGridView1.DataSource = db.GetTable1();
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(upd_Telephone.Text) || String.IsNullOrEmpty(upd_Name.Text) || String.IsNullOrEmpty(upd_LastName.Text))
+            {
+
+                MessageBox.Show("გთხოვთ შეავსოთ ყველა ველი");
+                return;
+
+            }
+       
+
             update.Telephone = upd_Telephone.Text;
             update.Date = upd_Date.Value;
             update.Name = upd_Name.Text;
@@ -43,5 +61,7 @@ namespace test_2
 
 
         }
+
+       
     }
 }

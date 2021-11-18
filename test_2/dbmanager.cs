@@ -124,10 +124,30 @@ namespace test_2
 
         // ძებნის მეთოდი
 
+        public void Search_employee(Class1 dea2)
+        {
+       SqlCommand cmd = new SqlCommand("SearchEmployee");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", dea2.Id);
+            cmd.Parameters.AddWithValue("@name", dea2.Name);
+            cmd.Parameters.AddWithValue("@telephone", dea2.Telephone);
 
+            using (DataTable dt = new DataTable("SearchEmployee"))
+            {
+                using (SqlConnection conn = new SqlConnection(satestodea))
+                {
 
+                    cmd.Connection = conn;
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    
+                }
 
-        // საბა რო ვერ მიხვდა ის მეთოდია
+            }
+        }
+
+        // აიდით წამოღება 
 
 
         public Class1 GetEmployeeById(int id)

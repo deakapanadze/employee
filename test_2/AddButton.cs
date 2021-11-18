@@ -34,7 +34,6 @@ namespace test_2
             class2.Lastname = txt_LastName.Text;
             class2.Date = Convert.ToDateTime(dt_Date.Text);
             db.insertEmp_sp(class2);
-            
             this.Close();
         }
 

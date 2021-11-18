@@ -30,11 +30,12 @@ namespace test_2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_EnterLastname = new System.Windows.Forms.TextBox();
+            this.txt_EnterPhone = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -69,58 +70,61 @@ namespace test_2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(16, 84);
+            this.label1.Location = new System.Drawing.Point(8, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 15);
+            this.label1.Size = new System.Drawing.Size(205, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "მიუთითე დროის შუალედი";
+            this.label1.Text = "მიუთითე დამატების თარიღი";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(16, 162);
+            this.label2.Location = new System.Drawing.Point(8, 217);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 15);
+            this.label2.Size = new System.Drawing.Size(146, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "მიმწოდებელი";
+            this.label2.Text = "ტელეფონის ნომერი";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(12, 215);
+            this.label3.Location = new System.Drawing.Point(8, 288);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 15);
+            this.label3.Size = new System.Drawing.Size(47, 15);
             this.label3.TabIndex = 2;
-            this.label3.Text = "ინვოისის ნომერი";
+            this.label3.Text = "გვარი";
             // 
-            // textBox1
+            // txt_EnterLastname
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 233);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 23);
-            this.textBox1.TabIndex = 3;
+            this.txt_EnterLastname.Location = new System.Drawing.Point(8, 318);
+            this.txt_EnterLastname.Name = "txt_EnterLastname";
+            this.txt_EnterLastname.Size = new System.Drawing.Size(227, 23);
+            this.txt_EnterLastname.TabIndex = 3;
             // 
-            // textBox2
+            // txt_EnterPhone
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(227, 23);
-            this.textBox2.TabIndex = 4;
+            this.txt_EnterPhone.Location = new System.Drawing.Point(8, 249);
+            this.txt_EnterPhone.Name = "txt_EnterPhone";
+            this.txt_EnterPhone.Size = new System.Drawing.Size(227, 23);
+            this.txt_EnterPhone.TabIndex = 4;
+         
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 120);
+            this.dateTimePicker1.Location = new System.Drawing.Point(8, 174);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(231, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(227, 23);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(16, 666);
+            this.button1.BackColor = System.Drawing.Color.PowderBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(16, 668);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 34);
             this.button1.TabIndex = 6;
@@ -132,9 +136,11 @@ namespace test_2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.BackColor = System.Drawing.Color.SeaGreen;
-            this.button2.Location = new System.Drawing.Point(141, 666);
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Location = new System.Drawing.Point(129, 668);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 34);
+            this.button2.Size = new System.Drawing.Size(106, 34);
             this.button2.TabIndex = 7;
             this.button2.Text = "ძებნა";
             this.button2.UseVisualStyleBackColor = false;
@@ -171,7 +177,6 @@ namespace test_2
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(870, 550);
             this.dataGridView1.TabIndex = 0;
-
             // 
             // Col_Id
             // 
@@ -179,6 +184,7 @@ namespace test_2
             this.Col_Id.HeaderText = "Id";
             this.Col_Id.Name = "Col_Id";
             this.Col_Id.ReadOnly = true;
+            this.Col_Id.Visible = false;
             // 
             // Col_Name
             // 
@@ -219,12 +225,12 @@ namespace test_2
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::test_2.Properties.Resources.add__6_;
-            this.button3.Location = new System.Drawing.Point(16, 12);
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(12, 12);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 65);
+            this.button3.Size = new System.Drawing.Size(101, 98);
             this.button3.TabIndex = 9;
-            this.button3.Text = "დამატება";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -233,9 +239,9 @@ namespace test_2
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.BackColor = System.Drawing.Color.SeaGreen;
-            this.button4.Location = new System.Drawing.Point(1048, 666);
+            this.button4.Location = new System.Drawing.Point(1027, 663);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 34);
+            this.button4.Size = new System.Drawing.Size(106, 34);
             this.button4.TabIndex = 10;
             this.button4.Text = "განახლება";
             this.button4.UseVisualStyleBackColor = false;
@@ -266,7 +272,7 @@ namespace test_2
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(81, 31);
             this.button5.TabIndex = 14;
-            this.button5.Text = "შემდეგი";
+            this.button5.Text = "წინა";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // button6
@@ -322,7 +328,8 @@ namespace test_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 712);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1156, 714);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button6);
@@ -335,8 +342,8 @@ namespace test_2
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_EnterPhone);
+            this.Controls.Add(this.txt_EnterLastname);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -357,8 +364,8 @@ namespace test_2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_EnterLastname;
+        private System.Windows.Forms.TextBox txt_EnterPhone;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -377,12 +384,12 @@ namespace test_2
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem წაშლაToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem რედაქტირებაToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.ToolStripMenuItem რედაქტირებაToolStripMenuItem;
     }
 }
 

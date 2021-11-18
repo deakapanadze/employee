@@ -132,6 +132,7 @@ namespace test_2
             this.Controls.Add(this.label1);
             this.Name = "UpdateButton";
             this.Text = "UpdateButton";
+       
             this.ResumeLayout(false);
             this.PerformLayout();
 

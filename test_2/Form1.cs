@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using test_2.Model;
+using System.Data.SqlClient;
 
 namespace test_2
 {
@@ -24,8 +25,10 @@ namespace test_2
             InitializeComponent();
             this.ContextMenuStrip = contextMenuStrip1;
             dataGridView1.AutoGenerateColumns = false;
+         
 
         }
+       
         private void Form1_Load(object sender, EventArgs e)
         {
             GetTable1();
@@ -37,6 +40,7 @@ namespace test_2
         {
             AddButton Add_Button = new AddButton();
             Add_Button.ShowDialog();
+            GetTable1();
 
         }
         // textBox ის გასუფთავება 
@@ -59,9 +63,18 @@ namespace test_2
 
        
 
-       
+       //ძებნის ღილაკი
         private void button2_Click(object sender, EventArgs e)
         {
+            //Class1 testes = new Class1();
+            //testes.Telephone = txt_EnterPhone.Text;
+            //testes.Name = txt_EnterLastname.Text;
+            //db.Search_employee(dataGridView1)
+           
+            
+
+
+
             GetTable1();
         }
 
@@ -90,9 +103,10 @@ namespace test_2
             int Id = selectedItem.Id;
             UpdateButton UpdateButton = new UpdateButton(Id, this);
             UpdateButton.ShowDialog();
+            GetTable1();
 
         }
 
-       
+      
     }
 }
